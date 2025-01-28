@@ -5,7 +5,7 @@ const gameStates = {};
 
 // команды и оформление текста
 bot.command('start', (ctx) => {
-    ctx.reply('привет. напиши /help чтобы узнать что я умею');
+    ctx.reply('_напиши /help чтобы узнать, что я умею_', {parse_mode:'MarkdownV2'});
 });
 
 bot.command('help', (ctx) => {
