@@ -1,16 +1,15 @@
 const { Bot, InlineKeyboard } = require('grammy');
 const bot = new Bot('7554852913:AAEkOoPyCc0xwym0Cg2UgtKwShKYcqCUtcU');
 
-// Состояние игры для каждого пользователя
 const gameStates = {};
 
+// команды и оформление текста
 bot.command('start', (ctx) => {
-    ctx.reply('привет');
+    ctx.reply('привет. напиши /help чтобы узнать что я умею');
 });
 
-// команды
 bot.command('help', (ctx) => {
-    ctx.reply('/start - приветствие\n/help - помощь\n/echo - повторить сообщение\n/joke - рассказать шутку\n/games - игры');
+    ctx.reply('/start - <b>приветствие</b>\n/help - <b>помощь</b>\n/echo - <b>повторить сообщение</b>\n/joke - <b>рассказать шутку</b>\n/games - <b>игры</b>', { parse_mode: 'HTML' });
 });
 
 bot.command('echo', (ctx) => {
